@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    void Awake()
+    {
+        this.transform.Rotate(0, 90, 0);
+    }
     public float speed = 10;
     public float jump = 10;
     Rigidbody rbody;
