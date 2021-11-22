@@ -6,24 +6,26 @@ public class RightTurnTileSpawner : MonoBehaviour
 {
     public GameObject[] tiles = new GameObject[DataHandler.GetTotalTypesNum()];
     public GameObject deadEnd;
-    public float x, y, z;
-    private Vector3 offset;
-    public GameObject newTile;
+
+
     void Awake()
     {
         DataHandler.AddTile();
 
         //RotationAdjustment();
-        offset = new Vector3(x, y, z);
 
-        if (DataHandler.GetTileNum() <= 10)
+        if (Physics.OverlapSphere(this.transform.position +(-transform.forward *4), 1).Length > 1)
         {
-            
+            Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
+        }
+        else if (DataHandler.GetTileNum() <= 10)
+        {
             NextTileSpawn();
         }
+       
         else
         {
-            newTile = Instantiate(deadEnd, this.transform.position + offset, Quaternion.Euler(0,90,0));
+            Instantiate(deadEnd, this.transform.position + (-transform.forward *4), Quaternion.Euler(0,90 + this.transform.eulerAngles.y,0));
 
             //Vector3 cPos = newTile.transform.GetChild(0).position;
             //newTile.transform.RotateAround(cPos, cPos, 90);
@@ -49,32 +51,11 @@ public class RightTurnTileSpawner : MonoBehaviour
         Debug.Log(val);
 
 
-        newTile = Instantiate(tiles[val], this.transform.position + offset, Quaternion.Euler(0,90,0));
+        Instantiate(tiles[val], this.transform.position + (-transform.forward * 4), Quaternion.Euler(0,90+ this.transform.eulerAngles.y, 0));
 
 
 
         //Vector3 cPos = newTile.transform.GetChild(0).position;
         //newTile.transform.RotateAround(cPos, new Vector3(0, 1, 0), transform.rotation.eulerAngles.y + 90);
     }
-
-    //void RotationAdjustment()
-    //{
-    //    float temp;
-
-    //    if (transform.rotation.eulerAngles.y == 90)
-    //    {
-    //        temp = x;
-    //        x = z;
-    //        z = temp;
-    //    }
-    //    if (transform.rotation.eulerAngles.y == -90)
-    //    {
-    //        z = -z;
-    //        x = -x;
-
-    //        temp = x;
-    //        x = z;
-    //        z = temp;
-    //    }
-    //}
 }

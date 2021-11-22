@@ -4174,7 +4174,6 @@ MonoBehaviour:
   x: 4
   y: 0
   z: 0
-  offset: {x: 4, y: 0, z: 0}
 --- !u!114 &6188672191594055738
 MonoBehaviour:
   m_ObjectHideFlags: 0

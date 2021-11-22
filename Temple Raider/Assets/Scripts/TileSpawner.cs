@@ -13,15 +13,19 @@ public class TileSpawner : MonoBehaviour
         DataHandler.AddTile();
 
         //RotationAdjustment();
-        offset = new Vector3(x, y, z);
+        
 
-        if (DataHandler.GetTileNum() <= 10)
+        if (Physics.OverlapSphere(this.transform.position + (transform.right * 4), 1).Length > 1)
+        {
+            Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
+        }
+        else if (DataHandler.GetTileNum() <= 10)
         {
             NextTileSpawn();
         }
         else
         {
-            Instantiate(deadEnd, this.transform.position + offset, Quaternion.identity);
+            Instantiate(deadEnd, this.transform.position + (transform.right * 4), this.transform.rotation);
         }
     }
     // Start is called before the first frame update
@@ -44,26 +48,26 @@ public class TileSpawner : MonoBehaviour
         Debug.Log(val);
 
 
-        Instantiate(tiles[val], this.transform.position + offset, Quaternion.identity);
+        Instantiate(tiles[val], this.transform.position + (transform.right * 4), this.transform.rotation);
     }
 
-    //void RotationAdjustment()
-    //{
-    //    float temp;
-
-    //    if (transform.rotation.eulerAngles.y == -90)
-    //    {
-    //        temp = x;
-    //        x = z;
-    //        z = temp;
-    //    }
-    //    if (transform.rotation.eulerAngles.y == 90)
-    //    {
-    //        z = -z;
-
-    //        temp = x;
-    //        x = z;
-    //        z = temp;
-    //    }
-    //}
+    void RotationAdjustment()
+    {
+        if (transform.rotation.eulerAngles.y == 90)
+        {
+            offset = -transform.forward * 4;
+        }
+        if (transform.rotation.eulerAngles.y == -90)
+        {
+            offset = transform.forward * 4;
+        }
+        if (transform.rotation.eulerAngles.y == -180 || transform.rotation.eulerAngles.y == 180)
+        {
+            offset = -transform.right * 4;
+        }
+        if (transform.rotation.eulerAngles.y == 0)
+        {
+            offset = transform.right * 4;
+        }
+    }
 }

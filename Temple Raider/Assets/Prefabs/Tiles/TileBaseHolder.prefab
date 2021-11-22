@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1075337752372215483}
   - component: {fileID: 4791593782284842135}
+  - component: {fileID: -4484618892670538279}
   m_Layer: 0
   m_Name: TileBaseHolder
   m_TagString: Untagged
@@ -49,10 +50,24 @@ MonoBehaviour:
   - {fileID: 5481645674681104692, guid: d600396cb70765042b2344b39de35321, type: 3}
   - {fileID: 1301279412699547630, guid: 5ad6d4b939864d849a7171719ef6cb33, type: 3}
   - {fileID: 172460463965089205, guid: 91a2f3dd41b859949a94f1825e4d9883, type: 3}
+  - {fileID: 8233458496324995252, guid: 7d2c49d0173e21d4b820bfaf4ca45694, type: 3}
   deadEnd: {fileID: 1301279412699547630, guid: 5ad6d4b939864d849a7171719ef6cb33, type: 3}
   x: 4
   y: 0
   z: 0
+--- !u!65 &-4484618892670538279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619235424450464286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.01, z: 0.01}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5623691183254151658
 PrefabInstance:
   m_ObjectHideFlags: 0
