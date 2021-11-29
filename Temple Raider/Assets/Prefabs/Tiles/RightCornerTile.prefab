@@ -1068,12 +1068,12 @@ MonoBehaviour:
   - {fileID: 6188672191594055740, guid: 0d03157968466074d829d915a1ba089f, type: 3}
   - {fileID: 611883301874078091, guid: d036a179d49dcf34cb0382aa81866e77, type: 3}
   - {fileID: 1754601534473623072}
+  - {fileID: 8233458496324995252, guid: 7d2c49d0173e21d4b820bfaf4ca45694, type: 3}
+  - {fileID: 3109056364559208422, guid: 884eb8f8442b203458fd62fb2bcef2ad, type: 3}
+  - {fileID: 7588781083836823230, guid: 962a40f5236dfe14c8015531b1f86fd9, type: 3}
+  - {fileID: 8543115419886342917, guid: 5076d72e662d13843b689cb69d0c74cd, type: 3}
+  - {fileID: 5764027462228656758, guid: 0e28b7f8ad9cf204b95b3ed03844dff5, type: 3}
   deadEnd: {fileID: 611883301874078091, guid: d036a179d49dcf34cb0382aa81866e77, type: 3}
-  x: 0
-  y: 0
-  z: -4
-  offset: {x: 0, y: 0, z: -4}
-  newTile: {fileID: 0}
 --- !u!114 &1754601534473623078
 MonoBehaviour:
   m_ObjectHideFlags: 0

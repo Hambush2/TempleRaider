@@ -5,7 +5,7 @@ using UnityEngine;
 public static class DataHandler
 {
     private static int tileNum = 0;
-    private static int totalTileTypes = 5;
+    private static int totalTileTypes = 9;
 
     public static int GetTileNum()
     {

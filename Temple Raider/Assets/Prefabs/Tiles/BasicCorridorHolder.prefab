@@ -51,10 +51,11 @@ MonoBehaviour:
   - {fileID: 1301279412699547630, guid: 5ad6d4b939864d849a7171719ef6cb33, type: 3}
   - {fileID: 172460463965089205, guid: 91a2f3dd41b859949a94f1825e4d9883, type: 3}
   - {fileID: 8233458496324995252, guid: 7d2c49d0173e21d4b820bfaf4ca45694, type: 3}
+  - {fileID: 3109056364559208422, guid: 884eb8f8442b203458fd62fb2bcef2ad, type: 3}
+  - {fileID: 7588781083836823230, guid: 962a40f5236dfe14c8015531b1f86fd9, type: 3}
+  - {fileID: 8543115419886342917, guid: 5076d72e662d13843b689cb69d0c74cd, type: 3}
+  - {fileID: 5764027462228656758, guid: 0e28b7f8ad9cf204b95b3ed03844dff5, type: 3}
   deadEnd: {fileID: 1301279412699547630, guid: 5ad6d4b939864d849a7171719ef6cb33, type: 3}
-  x: 4
-  y: 0
-  z: 0
 --- !u!65 &1083145574440870562
 BoxCollider:
   m_ObjectHideFlags: 0

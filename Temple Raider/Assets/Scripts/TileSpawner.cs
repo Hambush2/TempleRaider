@@ -6,8 +6,6 @@ public class TileSpawner : MonoBehaviour
 {
     public GameObject[] tiles = new GameObject[DataHandler.GetTotalTypesNum()];
     public GameObject deadEnd;
-    public float x, y, z;
-    private Vector3 offset;
     void Awake()
     {
         DataHandler.AddTile();
@@ -49,25 +47,5 @@ public class TileSpawner : MonoBehaviour
 
 
         Instantiate(tiles[val], this.transform.position + (transform.right * 4), this.transform.rotation);
-    }
-
-    void RotationAdjustment()
-    {
-        if (transform.rotation.eulerAngles.y == 90)
-        {
-            offset = -transform.forward * 4;
-        }
-        if (transform.rotation.eulerAngles.y == -90)
-        {
-            offset = transform.forward * 4;
-        }
-        if (transform.rotation.eulerAngles.y == -180 || transform.rotation.eulerAngles.y == 180)
-        {
-            offset = -transform.right * 4;
-        }
-        if (transform.rotation.eulerAngles.y == 0)
-        {
-            offset = transform.right * 4;
-        }
     }
 }
