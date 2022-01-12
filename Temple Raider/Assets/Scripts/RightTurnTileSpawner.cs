@@ -14,11 +14,12 @@ public class RightTurnTileSpawner : MonoBehaviour
 
         //RotationAdjustment();
 
-        if (Physics.OverlapSphere(this.transform.position +(-transform.forward *4), 1).Length > 1)
+        if (Physics.OverlapSphere(this.transform.position + (-transform.forward * 4), 2).Length > 1)
         {
             Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
+            //this.transform.Translate(Vector3.up * 4);
         }
-        else if (DataHandler.GetTileNum() <= 10)
+        else if (DataHandler.GetTileNum() <= DataHandler.GetMaxTiles())
         {
             NextTileSpawn();
         }

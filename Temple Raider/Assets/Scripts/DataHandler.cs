@@ -5,7 +5,8 @@ using UnityEngine;
 public static class DataHandler
 {
     private static int tileNum = 0;
-    private static int totalTileTypes = 9;
+    private static int totalTileTypes = 14;
+    private static int maxTileNum = 20;
 
     public static int GetTileNum()
     {
@@ -23,5 +24,10 @@ public static class DataHandler
     public static int GetTotalTypesNum()
     {
         return totalTileTypes;
+    }
+
+    public static int GetMaxTiles()
+    {
+        return maxTileNum;
     }
 }
