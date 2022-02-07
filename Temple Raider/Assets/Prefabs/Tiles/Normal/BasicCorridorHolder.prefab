@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2080861502919133766}
   m_Layer: 0
   m_Name: BasicCorridorHolder
-  m_TagString: Untagged
+  m_TagString: ForwardTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5481645674681104692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64b263c2f03df8043a2c4d2c54f949ea, type: 3}
   m_Name: 

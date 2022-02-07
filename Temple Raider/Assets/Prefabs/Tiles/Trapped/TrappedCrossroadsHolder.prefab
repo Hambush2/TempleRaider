@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4546300642149448319}
   m_Layer: 0
   m_Name: TrappedCrossroadsHolder
-  m_TagString: Untagged
+  m_TagString: All4Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8409443991173566846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64b263c2f03df8043a2c4d2c54f949ea, type: 3}
   m_Name: 
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8409443991173566846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc40d931d3f463f42ab67db35a6f5bbc, type: 3}
   m_Name: 

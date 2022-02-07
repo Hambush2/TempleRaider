@@ -6,6 +6,7 @@ public class TileSpawner : MonoBehaviour
 {
     public GameObject[] tiles = new GameObject[DataHandler.GetTotalTypesNum()];
     public GameObject deadEnd;
+    private bool notValSpawn;
     void Awake()
     {
         DataHandler.AddTile();
@@ -16,13 +17,14 @@ public class TileSpawner : MonoBehaviour
         if (Physics.OverlapSphere(this.transform.position + (transform.right * 4), 2).Length > 1)
         {
             Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
+            notValSpawn = true;
             //this.transform.Translate(Vector3.up * 4);
         }
         else if (DataHandler.GetTileNum() <= DataHandler.GetMaxTiles())
         {
             NextTileSpawn();
         }
-        else
+        else if (!notValSpawn)
         {
             Instantiate(deadEnd, this.transform.position + (transform.right * 4), this.transform.rotation);
         }

@@ -7,6 +7,22 @@ public static class DataHandler
     private static int tileNum = 0;
     private static int totalTileTypes = 14;
     private static int maxTileNum = 20;
+    private static int gridSize = 25;
+    private static Slots[,] spawnGrid = new Slots[gridSize, gridSize];
+
+    public static void setSlotXY() 
+    {
+        for(int rcount = 0; rcount < gridSize;) 
+        {
+            for(int ccount = 0; ccount < gridSize;) 
+            {
+                Debug.Log(rcount + ", " + ccount);
+                spawnGrid[rcount, ccount].setPos(ccount, rcount);
+                ccount++;
+            }
+            rcount++;
+        }
+    } 
 
     public static int GetTileNum()
     {
@@ -29,5 +45,24 @@ public static class DataHandler
     public static int GetMaxTiles()
     {
         return maxTileNum;
+    }
+
+    public static Slots getSpawnCoordVal(int x, int y) 
+    {
+        return spawnGrid[y, x];
+    }
+    public static void setSpawnCoordVal(int x, int y, Slots val) 
+    {
+        spawnGrid[y, x] = val;
+    }
+
+    public static Slots[,] getSpawnGrid() 
+    {
+        return spawnGrid;
+    }
+
+    public static int getGridSize() 
+    {
+        return gridSize;
     }
 }
