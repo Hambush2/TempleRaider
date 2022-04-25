@@ -8,7 +8,7 @@ public static class DataHandler
     private static int totalTileTypes = 14;
     private static int maxTileNum = 20;
     private static int gridSize = 25;
-    private static Slots[,] spawnGrid = new Slots[gridSize, gridSize];
+    private static Slots[,] spawnGrid;
 
     public static void setSlotXY() 
     {
@@ -59,6 +59,10 @@ public static class DataHandler
     public static Slots[,] getSpawnGrid() 
     {
         return spawnGrid;
+    }
+    public static void setSpawnGrid(int size) 
+    {
+         spawnGrid = new Slots[size,size];
     }
 
     public static int getGridSize() 
