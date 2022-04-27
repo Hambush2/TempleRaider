@@ -38,6 +38,7 @@ public class Spawner : MonoBehaviour
 
 
         Instantiate(tiles[val], currentSlot.getTile().transform.position + (transform.right * 4), currentSlot.getTile().transform.rotation);
+        
     }
 
     void RightTileSpawn() 

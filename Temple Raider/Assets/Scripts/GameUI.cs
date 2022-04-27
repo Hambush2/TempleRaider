@@ -39,7 +39,7 @@ public class GameUI : MonoBehaviour
 
     private void UpdateScore(int theScore)
     {
-        playerScore += theScore;
-        scoreText.text = "Treasure: " + playerScore.ToString();
+        Debug.Log("Score Up");
+        scoreText.text = "Treasure: " + theScore.ToString();
     }
 }

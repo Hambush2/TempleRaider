@@ -9,6 +9,7 @@ public static class DataHandler
     private static int maxTileNum = 20;
     private static int gridSize = 25;
     private static Slots[,] spawnGrid;
+    private static int score = 0;
 
     public static void setSlotXY() 
     {
@@ -68,5 +69,19 @@ public static class DataHandler
     public static int getGridSize() 
     {
         return gridSize;
+    }
+
+    public static int getScore() 
+    {
+        return score;
+    }
+    public static void setScore(int scoreIn) 
+    {
+        score = scoreIn;
+    }
+    public static void addScore(int addScore) 
+    {
+        Debug.Log("Adding Score");
+        score = score + addScore;
     }
 }

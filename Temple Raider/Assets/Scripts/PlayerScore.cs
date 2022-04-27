@@ -23,9 +23,9 @@ public class PlayerScore : MonoBehaviour
     public void AddScore(int Score)
     {
         //totalScore = totalScore + Score;
-        Debug.Log("Recieving Score Up");
         if (OnUpdateScore != null)
         {
+            Debug.Log("OnUpdateScore");
             OnUpdateScore(Score);
         }
     }

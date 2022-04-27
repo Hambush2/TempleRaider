@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4125582814126946705}
   - component: {fileID: 1607338484958058169}
   m_Layer: 0
-  m_Name: Torch (2)
+  m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1007,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.5686275, b: 0.2784314, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 1.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
