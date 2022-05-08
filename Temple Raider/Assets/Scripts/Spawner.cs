@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 
     void Awake() 
     {
-        StartCoroutine(GridSpawn());
+        //StartCoroutine(GridSpawn());
     }
 
     // Start is called before the first frame update
@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
         Instantiate(tiles[val], currentSlot.getTile().transform.position + (-transform.forward * 4), Quaternion.Euler(0, 90 + currentSlot.getTile().transform.eulerAngles.y, 0));
     }
 
-    IEnumerator GridSpawn() 
+    /*IEnumerator GridSpawn() 
     {
         DataHandler.setSpawnGrid(DataHandler.getGridSize());
 
@@ -154,5 +154,5 @@ public class Spawner : MonoBehaviour
                 openRoutes = false;
             }
         }
-    }
+    }*/
 }

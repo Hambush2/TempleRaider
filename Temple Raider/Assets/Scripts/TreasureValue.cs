@@ -21,6 +21,7 @@ public class TreasureValue : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Randomly assigns a value to the treasure and tells the player object to tell the score UI to update
         System.Random rand = new System.Random();
         int val = rand.Next(101, 1000);
         DataHandler.addScore(val);

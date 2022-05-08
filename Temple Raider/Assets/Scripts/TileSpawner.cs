@@ -6,26 +6,20 @@ public class TileSpawner : MonoBehaviour
 {
     public GameObject[] tiles = new GameObject[DataHandler.GetTotalTypesNum()];
     public GameObject deadEnd;
-    private bool notValSpawn;
     void Awake()
     {
+        //increments the tile count
         DataHandler.AddTile();
 
-        //RotationAdjustment();
-
-
-        if (Physics.OverlapSphere(this.transform.position + (transform.right * 4), 2).Length > 1)
-        {
-            Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
-            notValSpawn = true;
-            //this.transform.Translate(Vector3.up * 4);
-        }
-        else if (DataHandler.GetTileNum() <= DataHandler.GetMaxTiles())
+        //checks the coordinates array to see if the targeted spot is already occupied and in the number of tiles has not exceeded the maximum
+        if (checkCoords() == true && DataHandler.GetTileNum() <= DataHandler.GetMaxTiles())
         {
             NextTileSpawn();
         }
-        else if (!notValSpawn)
+        //if it has reached the maximum number of tiles spawn and there is a free spot, spawn a dead end
+        else if (checkCoords() == true)
         {
+            Debug.Log("Spawning Dead End");
             Instantiate(deadEnd, this.transform.position + (transform.right * 4), this.transform.rotation);
         }
     }
@@ -48,7 +42,24 @@ public class TileSpawner : MonoBehaviour
         val = rand.Next(0,DataHandler.GetTotalTypesNum());
         Debug.Log(val);
 
-
+        Debug.Log("Spawning Next Tile");
+        //spawns the next tile at the connecting position at the right rotation
         Instantiate(tiles[val], this.transform.position + (transform.right * 4), this.transform.rotation);
+        DataHandler.addCoord(this.transform.position + (transform.right*4));
+    }
+
+    //checks the target coordinates to see if they're already occupied
+    bool checkCoords() 
+    {
+        for(int count = 0; count < DataHandler.getCoordPointer();) 
+        {
+            if((this.transform.position + (transform.right*4) == DataHandler.getCoord(count)))
+            {
+                Debug.Log("Tile Detected by tile " + DataHandler.GetTileNum());
+                return false;
+            }
+            count++;
+        }
+        return true;
     }
 }

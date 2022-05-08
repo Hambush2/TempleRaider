@@ -17,10 +17,12 @@ public class PressurePlateDamage : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //ticks down the wait variable
         if(wait > 0) 
         {
             wait--;
         }
+        //puts the pressure plate back into its starting position
         if ((startY > this.transform.position.y) && (wait <= 0)) 
         {
             this.transform.position = new Vector3(this.transform.position.x, startY, this.transform.position.z);
@@ -29,6 +31,7 @@ public class PressurePlateDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //if the pressure plate has not been activated then it will deal damage to the player and sink down
         if (wait <= 0)
         {
             other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);

@@ -56,14 +56,14 @@ public class Slots
     }
 
     //Sets up which slots neighbour this one in the grid
-    public void setNeighbourSlots()
-    {
-        neighbourSlots[0] = DataHandler.getSpawnCoordVal(xPos, yPos + 1);
-        neighbourSlots[1] = DataHandler.getSpawnCoordVal(xPos + 1, yPos);
-        neighbourSlots[2] = DataHandler.getSpawnCoordVal(xPos, yPos - 1);
-        neighbourSlots[3] = DataHandler.getSpawnCoordVal(xPos - 1, yPos - 1);
+    //public void setNeighbourSlots()
+    //{
+    //    neighbourSlots[0] = DataHandler.getSpawnCoordVal(xPos, yPos + 1);
+    //    neighbourSlots[1] = DataHandler.getSpawnCoordVal(xPos + 1, yPos);
+    //    neighbourSlots[2] = DataHandler.getSpawnCoordVal(xPos, yPos - 1);
+    //    neighbourSlots[3] = DataHandler.getSpawnCoordVal(xPos - 1, yPos - 1);
 
-    }
+    //}
 
     //Sets up which directions the tile can connect to
     public void setConnection()
@@ -201,19 +201,19 @@ public class Slots
     }
 
     //Sets up which neighbouring slots the tile can lead to, denoting them as valid
-    public bool[] ValidSpawns() 
-    {
-        setNeighbourSlots();
-        setConnection();
+    //public bool[] ValidSpawns() 
+    //{
+    //    setNeighbourSlots();
+    //    setConnection();
 
-        for (int count = 0; count < 4;) 
-        {
-            if (connectedNeighbours[count] && neighbourSlots[count].getTile() == null)
-            {
-                validNeighbours[count] = true;
-            }
-            count++;
-        }
-        return validNeighbours;
-    }
+    //    for (int count = 0; count < 4;) 
+    //    {
+    //        if (connectedNeighbours[count] && neighbourSlots[count].getTile() == null)
+    //        {
+    //            validNeighbours[count] = true;
+    //        }
+    //        count++;
+    //    }
+    //    return validNeighbours;
+    //}
 }
